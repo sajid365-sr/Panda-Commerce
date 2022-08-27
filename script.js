@@ -46,16 +46,18 @@ emailBtn.addEventListener('click',function(){
 let disableBtn = document.getElementsByClassName('BuyNow');
 let cardFooter = document.getElementsByClassName('card-footer');
 
+let counter = 0;
 for(let keys of disableBtn){
     keys.addEventListener('click',function(){
         
-       
+        counter += 1;
+
 keys.parentNode.innerHTML = `
 <div style = 'position: relative'>
 <img src = 'images/shopping-cart.png'>
-<span id = 'counter' style = "position: absolute; top: 0; start: 100; background: blue; border-radius:50%; padding:0px 5px; color: white; font-size: 10px">1</span>
+<span id = 'counter' style = "position: absolute; top: 0; start: 100; background: blue; border-radius:50%; padding:0px 5px; color: white; font-size: 10px">${counter}</span>
 </div>
 `    
-
     })
 }
+
